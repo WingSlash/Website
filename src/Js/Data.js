@@ -33,19 +33,3 @@ const foods = [
         description:"A soup that has noodles that are made with rice flour. Made all over in street stalls and households."
     }
 ]
-
-const grid = document.getElementById("foodsGrid");
-const template = document.getElementById("foodCardTemplate");
-
-foods.forEach((food) => {
-const card = template.content.cloneNode(true);
-
-const img = card.querySelector("img");
-img.src = food.image;
-img.alt = food.dish;
-
-card.querySelector("h3").textContent = `${food.flag} ${food.dish}`;
-card.querySelector("span").textContent = food.country;
-card.querySelector("p").textContent = food.description;
-
-grid.appendChild(card);});
