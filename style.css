@@ -1,61 +1,209 @@
-body{
-    margin: 0;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-header{
-    background-color:#8DDE8F
-
+body {
+  font-family: Arial, sans-serif;
 }
 
+/* Header Section */
+.main-header {
+  background-color: #8DDE8F;
+  padding: 20px 40px;
+}
+
+.main-header h1 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/* Navbar */
 .navbar {
-    position: absolute;
-    width: 100%;
-    padding: 16px 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: rgba(255, 255, 255, 0.85);
-  }
-  
-  .nav-left ul {
-    display: flex;
-    list-style: none;
-    gap: 24px;
-  }
-  
-  .nav-left a {
-    text-decoration: none;
-    color: #333;
-    font-size: 14px;
-  }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 12px 30px;
+  border-radius: 8px;
+}
 
-  /* Hero */
+.nav-left ul {
+  display: flex;
+  list-style: none;
+  gap: 24px;
+}
+
+.nav-left a {
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+}
+
+.nav-right {
+  display: flex;
+  gap: 15px;
+}
+
+.nav-right a {
+  text-decoration: none;
+  padding: 8px 20px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.login {
+  color: #333;
+  border: 1px solid #333;
+}
+
+.signup {
+  background-color: #333;
+  color: white;
+}
+
+/* Hero Section */
 .hero {
-    height: 100vh;
-    background-image: url("./src/Background.png");
-    background-size: cover;
-    background-position: center;
-    position: relative;
-  }
-  
-  .hero::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.35);
-  }
-  
-  .hero-content {
-    position: relative;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    padding-left: 80px;
-  }
-  
-  .hero h1 {
-    color: white;
-    font-size: 56px;
-    font-weight: 500;
-    line-height: 1.2;
-  }
+  height: 400px;
+  background-image: url("./src/Background.png");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.hero-content {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 80px;
+  z-index: 1;
+}
+
+.hero h1 {
+  color: white;
+  font-size: 56px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+/* Food Cards Section */
+.food-section {
+  background-color: #8DDE8F;
+  padding: 40px;
+}
+
+.sort-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.sort-btn {
+  background-color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.sort-btn::after {
+  content: "🔽";
+  font-size: 12px;
+}
+
+.food-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  max-width: 1000px;
+}
+
+.food-card {
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  gap: 15px;
+  padding: 15px;
+}
+.food-flag-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.food-flag {
+  width: 60px;
+  height: 45px;
+  object-fit: cover;
+  border: 1px solid #ddd;
+}
+
+.food-img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.food-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.food-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.food-country {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.food-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+
+.food-desc {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.4;
+}
+.chat-icon {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  background-color: #4A90E2;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}

@@ -33,3 +33,25 @@ const foods = [
         description:"A soup that has noodles that are made with rice flour. Made all over in street stalls and households."
     }
 ]
+const foodGrid = document.getElementById('foodGrid');
+
+foods.forEach(food => {
+    const card = document.createElement('div');
+    card.className = 'food-card';
+    
+    card.innerHTML = `
+        <div class="food-flag-container">
+            <img class="food-flag" src="${food.flag}" alt="${food.country} flag">
+            <img class="food-img" src="${food.image}" alt="${food.title}">
+        </div>
+        <div class="food-content">
+            <div class="food-header">
+                <span class="food-country">${food.country}</span>
+            </div>
+            <h3 class="food-title">${food.title}</h3>
+            <p class="food-desc">${food.description}</p>
+        </div>
+    `;
+    
+    foodGrid.appendChild(card);
+});
