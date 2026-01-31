@@ -3,33 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Food Worldwide</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header><h1>Food Worldwide</h1>
-        <header class="navbar">
+    <!-- Header -->
+    <div class="main-header">
+        <h1>Food Worldwide</h1>
+        <nav class="navbar">
             <div class="nav-left">
-              <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Saved</a></li>
-                <li><a href="#">Share</a></li>
-                <li><a href="#">Contact us</a></li>
-                <li><a href="#">About us</a></li>
-                <li><a href="#">FAQ</a></li>
-              </ul>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Saved</a></li>
+                    <li><a href="#">Share</a></li>
+                    <li><a href="#">Contact us</a></li>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
             </div>
-        
             <div class="nav-right">
-              <a href="#" class="login">Log in</a>
-              <a href="#" class="signup">Sign up</a>
+                <a href="#" class="login">Log in</a>
+                <a href="#" class="signup">Sign up</a>
             </div>
-          </header>
+        </nav>
+    </div>
+<!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <h1>Your food journey</br>starts here</h1>
+            <h1>Your food journey<br>starts here</h1>
         </div>
     </section>
-    <script src="./src/Js/Data.js"></script>
+
+    <!-- Food Cards Section -->
+    <section class="food-section">
+        <div class="sort-container">
+            <button class="sort-btn">Sort By</button>
+        </div>
+        
+        <div class="food-grid" id="foodGrid"></div>
+    </section>
+
+    <!-- Chat Icon -->
+    <div class="chat-icon">💬</div>
+
+    <script src="src/Js/Script.js"></script>
 </body>
 </html>
