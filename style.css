@@ -71,7 +71,6 @@ body {
   background-size: cover;
   background-position: center;
   position: relative;
-  perspective: 200px;
 }
 
 .hero::after {
